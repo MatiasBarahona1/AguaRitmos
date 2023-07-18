@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.menu {
+ 
+    display: flex;
+    list-style-type: none;
+    background-color: black;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-around
+
+
+}
+
+.menu-items {
+    color: white;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.ImagenPrincipal {
+    background-image: url("../imagenes/salsa.jpg");
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-inline: 150px;
+}
+.ImagenPrincipal h2 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.377);
+    padding-inline: 15px;
+}
+.ImagenPrincipal p {
+    color: white;
+    background-color:rgba(0, 0, 0, 0.377);
+
+}
+
+.mapa-video {
+    padding: 1rem;
+    background-color: black;
+    display: flex;
+}
+
+.mapa-video p {
+    color: white;
+    font-family: sans-serif;
+    justify-content: center;
+    padding-inline: 200px;
+}
