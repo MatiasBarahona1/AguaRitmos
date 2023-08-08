@@ -1,0 +1,18 @@
+
+//// CRONOGRAMA /////
+.cartas {  
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+  .cartita {
+    background-color: rgba(25, 132, 219, 0.425);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+  }

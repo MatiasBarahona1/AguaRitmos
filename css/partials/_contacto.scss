@@ -1,0 +1,22 @@
+///// contacto//////
+.tarjeta-contacto {
+    background-color: #333;
+    border-radius: 30px;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .tarjeta-texto {
+    color: #2DECF0;
+  }
+  .tarjeta-titulo {
+    color: #2DECF0;
+  }
+  .tarjeta-foto{
+    max-width: 100px;
+    .tarjetita-contacto{
+        display: flex;
+        padding: 70px;
+        gap: 10px;
+        }
+  }

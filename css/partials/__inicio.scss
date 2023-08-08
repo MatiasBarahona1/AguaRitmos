@@ -1,0 +1,34 @@
+.ImagenPrincipal {
+    background-image: url("../imagenes/salsa.jpg");
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-inline: 150px;
+
+    & h2 {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.377);
+      padding-inline: 15px}
+
+   & p {
+        color: white;
+        background-color:rgba(0, 0, 0, 0.377);
+    }
+}
+.mapa-video {
+    padding: 1rem;
+    background-color: black;
+    display: flex;
+    & p {
+      color: white;
+      font-family: sans-serif;
+      justify-content: center;
+      padding-inline: 200px;
+  }
+}

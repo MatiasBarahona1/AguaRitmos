@@ -1,0 +1,32 @@
+    ///QUIENES SOMOS ////
+    
+    .fondo {
+        background-image: url(../imagenes/fondoc.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        }
+    
+    .gallery{
+      min-height: 100vh;
+      width: 80%;
+      outline: 10px solid #2DECF0; 
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 
+      minmax(min(350px,100% ), 1fr)) ;
+      gap: 30px;
+  
+      &-foto {
+  
+          width: 100%;
+          height: 100%;
+          object-fit: cover;}
+  }
+  .quienessomos {
+    padding-top: 20px;
+  }
+  .fuentequienes {
+    color: #2DECF0;
+  }

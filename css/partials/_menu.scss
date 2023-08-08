@@ -1,0 +1,12 @@
+.menu {
+    display: flex;
+    list-style-type: none;
+    background-color: black;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+    }
+    .menu-items {
+        color: white;
+        font-family: sans-serif;
+        text-decoration: none; }
