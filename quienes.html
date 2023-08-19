@@ -15,46 +15,65 @@
 
 
 <body class="fondo">
-    <nav>
-        <ul class="menu"> 
-            <li><a class="menu-items" 
-                href="./index.html">Inicio</a></li>
+</head>
+<body class="fondo">
+    <header>
+        <img class="logo" src="./imagenes/LOGO.png" alt="Logo">
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./quienes.html">Quiénes somos</a></li>
+                <li><a href="./cronograma.html">Cronograma</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./precios.html">Precios</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <li><a class="menu-items"
-                 href="./quienes.html">Quienes Somos</a></li>
 
-            <li><a class="menu-items" 
-                href="./cronograma.html">Cronograma</a></li>
 
-            <li><a class="menu-items"
-                 href="./contacto.html">Contacto</a></li>
+    <script type="text/javascript">
+        window.onload = function(){
+        (function(d, script) {
+        script = d.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.src = 'https://w.app/widget-v1/s5yLw2.js';
+        d.getElementsByTagName('head')[0].appendChild(script);
+        }(document));
+        };
+        </script>
 
-            <li><a class="menu-items" 
-                href="./precios.html">Precios</a></li>
+    
+    <script src="./js/main.js"></script>
 
-        </ul>
-    </nav>
     <section class="gallery">
 
-        <img class="gallery-foto" src="./imagenes/1.JPG" alt="1">
-        <img class="gallery-foto" src="./imagenes/2.JPG" alt="2">
-        <img class="gallery-foto" src="./imagenes/3.JPG" alt="3">
-        <img class="gallery-foto" src="./imagenes/4.jpg" alt="4">
-        <img class="gallery-foto" src="./imagenes/5.jpg" alt="5">
-        <img class="gallery-foto" src="./imagenes/6.jpg" alt="6">
+        <img class="gallery-foto animacion1" src="./imagenes/1.JPG" alt="1">
+        <img class="gallery-foto animacion1" src="./imagenes/2.JPG" alt="2">
+        <img class="gallery-foto animacion1" src="./imagenes/3.JPG" alt="3">
+        <img class="gallery-foto animacion2" src="./imagenes/4.jpg" alt="4">
+        <img class="gallery-foto animacion2" src="./imagenes/5.jpg" alt="5">
+        <img class="gallery-foto animacion2" src="./imagenes/6.jpg" alt="6">
 
     </section>
     
+    <section class="quienes">
 
-    <div class="quienessomos"></div>
-    <h1 class="fuentequienes">NOSOTROS</h1>
-
-    <P class="fuentequienes">
-        Ofrecemos clases de salsa, mambo, bachata, cha-cha, para todos los niveles de habilidad y experiencia. Con eventos, fiestas y salidas regulares, nuestro estudio brinda un ambiente divertido y social para practicar y conectarse con otros. El baile es más que un simple ejercicio: puede ser su mejor terapia para la salud física y mental, y estamos aquí para hacerlo realidad. ¡Nuestra ubicación privilegiada en el corazón de Mendoza hace que sea conveniente para ti unirte a nosotros y comenzar a bailar hoy mismo! 
+        <div class="quienes">
+            <p class="quienes-somos">Nosotros</p>
+            <p>
+                Ofrecemos clases de salsa, mambo, bachata, cha-cha, para todos los niveles de habilidad y experiencia. Con eventos, fiestas y salidas regulares, nuestro estudio brinda un ambiente divertido y social para practicar y conectarse con otros. El baile es más que un simple ejercicio: puede ser su mejor terapia para la salud física y mental, y estamos aquí para hacerlo realidad. ¡Nuestra ubicación privilegiada en el corazón de Mendoza hace que sea conveniente para ti unirte a nosotros y comenzar a bailar hoy mismo! 
+                
+                <br>Empieza ahora mismo
+            </p>
+            <hr>
+        </div>
         
-    </P>
-</div>
-
+        <section></section>
+     
     
 
 </body>
@@ -103,18 +122,29 @@
     
                 <hr class="mb-4">
     
-                <p>
-                    <i class="bi bi-instagram"> @agua.rc</i>  
-                </p>         
-                <p>
-                    <i class="bi bi-whatsapp"></i> 2604697204</i>  
-                </p>         
-                <p>
-                    <i class="bi bi-facebook"></i> Agua Ritmos Caribeños</i>  
-                </p>         
-                <p>
-                    <i class="bi bi-youtube"></i></i>  
-                </p>         
+                      <p>
+                     
+                         <a href="https://www.instagram.com/agua.rc/"><i class="bi bi-instagram contenedor-icons"> @agua.rc</i>
+                         </a>
+
+                    </p>         
+                    <p>
+                        <a href="https://w.app/aguaritmos"> <i class="bi bi-whatsapp contenedor-icons"> 2604697204</i> 
+                        </a>
+
+                    </p>         
+                    <p> 
+                        
+                        <a href="https://www.facebook.com/aguaritmos"><i class="bi bi-facebook contenedor-icons"> Agua Ritmos Caribeños</i>
+                        </a>
+                        </i>  
+                        
+                    </p>         
+                    <p>
+                        <a href="https://www.youtube.com/@matybarahona6492">  <i class="bi bi-youtube contenedor-icons"> </i>
+                         </a>
+                         
+                    </p>       
             </div>
         </div>
 

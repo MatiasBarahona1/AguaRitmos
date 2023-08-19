@@ -2,10 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .contenedor-icons {
   color: #2DECF0;
+  text-decoration: none;
+}
+.contenedor-icons a:link {
+  text-decoration: none;
+}
+.contenedor-icons a:link a:visited {
+  text-decoration: none;
 }
 
 .ImagenPrincipal {
@@ -13,12 +21,14 @@
   height: 80vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: 50% 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding-inline: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .ImagenPrincipal h2 {
   color: white;
@@ -28,35 +38,85 @@
 .ImagenPrincipal p {
   color: white;
   background-color: rgba(0, 0, 0, 0.377);
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.mapa-video {
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem;
-  background-color: black;
-  display: flex;
-}
-.mapa-video p {
-  color: white;
-  font-family: sans-serif;
-  justify-content: center;
-  padding-inline: 200px;
+  background-color: #000000;
 }
 
-.menu {
-  display: flex;
+.logo {
+  max-width: 5rem;
+}
+
+.nav-list {
   list-style-type: none;
-  background-color: black;
+  display: flex;
   gap: 1rem;
-  padding: 1rem;
-  justify-content: space-around;
 }
 
-.menu-items {
-  color: white;
-  font-family: sans-serif;
+.nav-list li a {
   text-decoration: none;
+  color: #ffffff;
 }
 
+.nav-list li a:hover {
+  color: aqua;
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .abrir-menu {
+    color: #f1e3e3;
+  }
+  .cerrar-menu {
+    color: #ececec;
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+  .nav-list li a {
+    color: rgba(236, 236, 236, 0.9254901961);
+  }
+}
 .fondo {
   background-image: url(../imagenes/fondoc.jpg);
   background-size: cover;
@@ -81,37 +141,145 @@
      object-fit: cover;
 }
 
-.quienessomos {
-  padding-top: 20px;
+.quienes {
+  background-color: #000000;
+  color: #2DECF0;
+  border: 1px solid #000000;
+  margin: 0% auto;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 10px 10px 5px rgb(8, 8, 8);
+  width: auto;
+  box-sizing: border-box;
 }
 
-.fuentequienes {
+.quienes-somos {
+  font-size: 50px;
   color: #2DECF0;
 }
 
-.tarjeta-contacto {
-  background-color: #333;
-  border-radius: 30px;
+.btn-precio {
+  background-color: #24BABD;
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.btn-precio:hover {
+  background-color: #2DECF0;
+}
+
+@media (max-width: 700px) {
+  .columna {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1070px) {
+  .columna {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.animacion1 {
+  animation: tilt-in-top-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes tilt-in-top-1 {
+  0% {
+    transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+.animacion2 {
+  animation: tilt-in-fwd-bl 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes tilt-in-fwd-bl {
+  0% {
+    transform: rotateY(-20deg) rotateX(-35deg) translate(-300px, 300px) skew(-35deg, 10deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
+}
+.body-contacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.body-contacto .card {
+  position: relative;
+  width: 500px;
+  height: 600px;
+}
+.body-contacto .card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: radius 10px;
   overflow: hidden;
+  transition: 0.5s;
+}
+.body-contacto .card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+.body-contacto .card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.body-contacto .card .front h3 {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: antiquewhite;
+}
+.body-contacto .card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: black;
+  padding: 15px;
+  color: aliceblue;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.body-contacto .card .back .link {
+  border-top: solid 1px white;
+  height: 300px;
+  line-height: 50px;
+}
+.body-contacto .card .back .link a {
+  color: white;
+}
+.body-contacto .card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+.body-contacto .card .back p {
+  letter-spacing: 1px;
 }
 
-.tarjeta-texto {
-  color: #2DECF0;
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
 }
 
-.tarjeta-titulo {
-  color: #2DECF0;
-}
-
-.tarjeta-foto {
-  max-width: 100px;
-}
-.tarjeta-foto .tarjetita-contacto {
-  display: flex;
-  padding: 70px;
-  gap: 10px;
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
 }
 
 .precios {
@@ -124,7 +292,7 @@
 }
 
 .columna {
-  background-color: #1F3F40;
+  background-color: #2a2e2e;
   color: #2DECF0;
   border: 1px solid #333;
   margin: 0% auto;
@@ -166,6 +334,57 @@
     margin-bottom: 15px;
   }
 }
+.precios {
+  animation: bounce-in-top 1.1s both;
+}
+
+/* ----------------------------------------------
+* Generated by Animista on 2023-8-16 19:17:27
+* Licensed under FreeBSD License.
+* See http://animista.net/license for more info. 
+* w: http://animista.net, t: @cssanimista
+* ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation bounce-in-top
+ * ----------------------------------------
+ */
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-500px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
 .cartas {
   display: flex;
   gap: 1rem;
@@ -182,4 +401,20 @@
   flex-direction: column;
   padding: 1rem;
   width: 100%;
+}
+
+.cartas {
+  animation: rotate-scale-up 0.65s linear both;
+  animation-delay: 0.5;
+}
+@keyframes rotate-scale-up {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
 }/*# sourceMappingURL=estilos.css.map */

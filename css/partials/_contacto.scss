@@ -1,22 +1,85 @@
 ///// contacto//////
-.tarjeta-contacto {
-    background-color: #333;
-    border-radius: 30px;
-    overflow:hidden;
+ .body-contacto {
     display: flex;
-    flex-direction: column;
-  }
-  .tarjeta-texto {
-    color: #2DECF0;
-  }
-  .tarjeta-titulo {
-    color: #2DECF0;
-  }
-  .tarjeta-foto{
-    max-width: 100px;
-    .tarjetita-contacto{
-        display: flex;
-        padding: 70px;
-        gap: 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  
+    .card {
+      position: relative;
+      width: 500px;
+      height: 600px;
+      .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border: radius 10px;
+        overflow: hidden;
+        transition: .5s;
+      }
+      .front {
+        transform: perspective(600px) rotateY(0deg); 
+        box-shadow: 0 5px 10px #000;
+  
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
+        h3 {
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          color: antiquewhite;
+        }
+      }
+    .back {
+      transform: perspective(600px) rotateY(180deg);
+      background: black;
+      padding: 15px;
+      color: aliceblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      
+      .link {
+        border-top: solid 1px white;
+        height: 300px;
+        line-height: 50px;
+
+        a {
+          color: white;
+        }
+
+        
+      }
+
+      h3 {
+        font-size: 30px;
+        margin-top: 20px;
+
+        letter-spacing: 2px;
+      }
+
+      p {
+        letter-spacing: 1px;
+      }
+    }
+      
+  
+    }
+  
   }
+
+.card:hover .front {
+transform: perspective(600px) rotateY(180deg);
+
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+
+}
